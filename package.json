@@ -97,6 +97,27 @@
     "yauzl": "^2.10.0"
   },
   "contributes": {
+    "languages": [
+      {
+        "id": "dtd",
+        "extensions": [
+          ".dtd",
+          ".ent",
+          ".mod"
+        ],
+        "aliases": [
+          "DTD",
+          "dtd"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dtd",
+        "scopeName": "text.xml.dtd",
+        "path": "./syntaxes/dtd.tmLanguage.json"
+      }
+    ],
     "configuration": {
       "type": "object",
       "title": "XML",
@@ -562,15 +583,6 @@
         }
       ]
     },
-    "languages": [
-      {
-        "id": "xml",
-        "extensions": [
-          ".ent",
-          ".mod"
-        ]
-      }
-    ],
     "jsonValidation": [
       {
         "fileMatch": "package.json",
