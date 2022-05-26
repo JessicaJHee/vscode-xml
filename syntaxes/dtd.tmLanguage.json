@@ -20,10 +20,10 @@
       "patterns": [
         {
           "match": "\\s+(CDATA|IDREFS|IDREF|ID|NMTOKENS|NMTOKEN|ENTITY|ENTITIES|NOTATION|SYSTEM|NDATA)",
-          "name": "keyword.other.data-type.dtd"
+          "name": "storage.type.dtd"
         },
         {
-          "match": "(#[A-Z]+)|(ANY)|(EMPTY)",
+          "match": "(#[A-Z]+)|(\\sANY)|(\\sEMPTY)",
           "name": "constant.language.dtd"
         },
         {
@@ -35,7 +35,16 @@
           "begin": "(%[a-zA-Z][a-zA-Z0-9_-])",
           "end": ";",
           "name": "variable.language.dtd"
+        },
+        {
+          "match": "(\\+|\\*|\\?)",
+          "name": "keyword.operator.dtd"
+        },
+        {
+          "match":"(\\p{Lu})(\\P{Ll})",
+          "name": "variable.parameter.dtd"
         }
+        
       ]
     },
     {
